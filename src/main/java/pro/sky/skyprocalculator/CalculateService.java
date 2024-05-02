@@ -7,4 +7,9 @@ public interface CalculateService {
     String resultPlus(int userNum1,int userNum2);
 
     String resultMinus(int userNum1, int userNum2);
+
+    String resultMultiply(int userNum1, int userNum2);
+
+    String resultDivide(int userNum1, int userNum2);
+
 }

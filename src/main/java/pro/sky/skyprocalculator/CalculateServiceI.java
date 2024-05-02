@@ -14,6 +14,16 @@ public class CalculateServiceI implements CalculateService {
         return userNum1+"+"+userNum2+"="+(userNum1+userNum2);
     }
     public String resultMinus(int userNum1,int userNum2) {
+
         return userNum1+"-"+userNum2+"="+(userNum1-userNum2);
+    }
+    @Override
+    public String resultMultiply(int userNum1, int userNum2) {
+        return userNum1+"*"+userNum2+"="+(userNum1*userNum2);
+    }
+
+    @Override
+    public String resultDivide(int userNum1, int userNum2) {
+        return userNum1+"/"+userNum2+"="+((float)userNum1/userNum2);
     }
 }
