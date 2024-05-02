@@ -10,7 +10,10 @@ public class CalculateServiceI implements CalculateService {
     }
 
 
-    public String answerHello( int userNum1,int userNum2) {
-        return "Ответ="+userNum1+"+"+userNum2;
+    public String resultPlus(int userNum1,int userNum2) {
+        return userNum1+"+"+userNum2+"="+(userNum1+userNum2);
+    }
+    public String resultMinus(int userNum1,int userNum2) {
+        return userNum1+"-"+userNum2+"="+(userNum1-userNum2);
     }
 }

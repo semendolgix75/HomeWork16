@@ -4,5 +4,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public interface CalculateService {
     String hello();
-    String answerHello(@RequestParam("name") int userNum1,@RequestParam("name") int userNum2);
+    String resultPlus(int userNum1,int userNum2);
+
+    String resultMinus(int userNum1, int userNum2);
 }
