@@ -7,35 +7,34 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CalculateController {
-    private final CalculateService calculateService ;
+    private final CalculateService calculateService;
 
     public CalculateController(CalculateService calculateService) {
         this.calculateService = calculateService;
     }
 
     @GetMapping(path = "/calculator")
-    public String hello() {
-        return calculateService.hello();
+    public String calculator() {
+        return calculateService.welcomeCalculator();
     }
 
     @GetMapping(path = "/calculator/plus")
-    public String resultPlus (@RequestParam(value="num1",required = false) Integer userNum1,@RequestParam(value="num2",required = false) Integer userNum2)
-    {
-        return calculateService.resultPlus(userNum1,userNum2);
+    public String resultPlus(@RequestParam(value = "num1", required = false) Integer userNum1, @RequestParam(value = "num2", required = false) Integer userNum2) {
+        return calculateService.resultPlus(userNum1, userNum2);
     }
+
     @GetMapping(path = "/calculator/minus")
-    public String resultMinus (@RequestParam(value="num1",required = false) Integer userNum1,@RequestParam(value="num2",required = false) Integer userNum2)
-    {
-        return calculateService.resultMinus(userNum1,userNum2);
+    public String resultMinus(@RequestParam(value = "num1", required = false) Integer userNum1, @RequestParam(value = "num2", required = false) Integer userNum2) {
+        return calculateService.resultMinus(userNum1, userNum2);
     }
+
     @GetMapping(path = "/calculator/multiply")
-    public String resultMultiply (@RequestParam(value="num1",required = false) Integer userNum1,@RequestParam(value="num2",required = false) Integer userNum2)
-    {
-        return calculateService.resultMultiply(userNum1,userNum2);
+    public String resultMultiply(@RequestParam(value = "num1", required = false) Integer userNum1, @RequestParam(value = "num2", required = false) Integer userNum2) {
+        return calculateService.resultMultiply(userNum1, userNum2);
     }
+
     @GetMapping(path = "/calculator/divide")
-    public String resultDivide (@RequestParam(value="num1",required = false) Integer userNum1,@RequestParam(value="num2",required = false) Integer userNum2)
-    {
-        return calculateService.resultDivide(userNum1,userNum2);
+    public String resultDivide(@RequestParam(value = "num1", required = false) Integer userNum1, @RequestParam(value = "num2", required = false) Integer userNum2) {
+        return calculateService.resultDivide(userNum1, userNum2);
     }
 }
